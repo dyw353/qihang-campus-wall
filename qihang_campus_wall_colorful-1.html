@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5b68e8">
+<title>启航校园墙｜西安启航职业高级中学</title>
+<style>
+:root{--ink:#20233d;--muted:#7e829c;--purple:#625fe8;--blue:#4d91ef;--pink:#ff719d;--orange:#ffad55;--mint:#43c9ad;--bg:#f5f6ff;--card:#fff;--line:#eceeff;--shadow:0 10px 30px rgba(70,76,150,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}
+.wrap{max-width:760px;margin:auto;padding:0 15px 90px}
+.hero{margin:0 -15px;padding:25px 20px 22px;color:#fff;background:linear-gradient(120deg,#5368f4 0%,#8060ed 38%,#ed6eaa 72%,#ffad62 100%);border-radius:0 0 28px 28px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#ffffff20}.hero:before{width:190px;height:190px;right:-45px;top:-65px}.hero:after{width:100px;height:100px;right:100px;bottom:-65px}
+.topline{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}.school{font-size:13px;opacity:.9;letter-spacing:.5px}.private{font-size:11px;padding:6px 10px;border-radius:30px;background:#ffffff24;border:1px solid #ffffff45}
+h1{font-size:29px;line-height:1.2;margin:18px 0 7px;position:relative;z-index:1;letter-spacing:1px}.subtitle{font-size:13px;opacity:.9;position:relative;z-index:1}.date{font-size:12px;margin-top:14px;opacity:.88;position:relative;z-index:1}
+.hero-actions{display:flex;gap:9px;margin-top:18px;position:relative;z-index:1}.hero-actions button{background:#fff;color:#5b60dc;padding:10px 15px;border-radius:14px;font-weight:700;font-size:13px;box-shadow:0 5px 15px #3534a333}
+.section{margin-top:20px}.quick button:nth-child(1){background:linear-gradient(145deg,#fff7df,#fff)}.quick button:nth-child(2){background:linear-gradient(145deg,#fff0f5,#fff)}.quick button:nth-child(3){background:linear-gradient(145deg,#eafaff,#fff)}.quick button:nth-child(4){background:linear-gradient(145deg,#effbef,#fff)}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}.section-head h2{font-size:17px;margin:0}.small{font-size:12px;color:var(--muted)}
+.mapcard,.composer,.post,.feature{background:var(--card);border-radius:21px;box-shadow:var(--shadow);overflow:hidden}
+.maphead{padding:15px 16px 10px;display:flex;justify-content:space-between;align-items:center}.maphead strong{font-size:15px}.maptag{font-size:11px;background:#eafaf5;color:#239b80;padding:5px 9px;border-radius:20px}
+.mapview{position:relative;background:#eaf2ff}.mapview img{display:block;width:100%;height:370px;object-fit:cover;object-position:center 48%;opacity:.96}
+.mapnote{padding:10px 14px;font-size:11px;color:#7c8299;background:#fff}
+.map-pin{position:absolute;border-radius:20px;padding:6px 9px;background:#fff;color:#4e58c9;font-size:11px;font-weight:700;box-shadow:0 4px 12px #40467a22;border:1px solid #e8e9ff}
+.pin-a{top:17%;left:8%}.pin-b{top:53%;left:45%}.pin-c{bottom:12%;left:25%}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.quick button{padding:13px 4px 11px;border-radius:17px;background:#fff;box-shadow:var(--shadow);color:var(--ink);font-size:12px;font-weight:650}
+.quick span{display:block;font-size:22px;margin-bottom:5px}
+.composer{padding:15px}.composer-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}.avatar{width:38px;height:38px;border-radius:14px;background:linear-gradient(135deg,#ffb86c,#ff7e9f);display:grid;place-items:center;color:#fff;font-size:19px}
+.composer-top strong{font-size:14px}.composer-top small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+textarea{width:100%;min-height:88px;resize:vertical;border:1px solid var(--line);border-radius:15px;padding:12px;outline:none;background:#fafaff;color:var(--ink)}textarea:focus,input:focus{border-color:#aaa8ff}
+.compose-row{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+select,input{border:1px solid var(--line);border-radius:12px;padding:9px 10px;background:#fff;color:var(--ink);outline:none;font-size:13px}
+.primary{margin-left:auto;background:linear-gradient(110deg,#5e6bea,#8a65e7);color:white;padding:10px 18px;border-radius:13px;font-weight:700;font-size:13px}
+.filter{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none}.filter button{white-space:nowrap;padding:8px 13px;border-radius:30px;background:#fff;color:#727794;border:1px solid #eeeefe;font-size:12px}.filter button.active{background:#625fe8;color:#fff;border-color:#625fe8}
+.feed{display:grid;gap:12px}.post{padding:15px}.post-head{display:flex;align-items:center;gap:9px}.post-avatar{width:36px;height:36px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:800}.post-author{font-size:13px;font-weight:750}.post-time{font-size:11px;color:#9a9db2;margin-top:2px}.tag{margin-left:auto;font-size:11px;padding:5px 9px;border-radius:20px;background:#f0efff;color:#6b62db}
+.post-content{font-size:14px;line-height:1.75;margin:12px 0 13px;white-space:pre-wrap;overflow-wrap:anywhere}.post-actions{display:flex;gap:20px;border-top:1px solid #f1f1fa;padding-top:11px}.post-actions button{background:none;color:#81859f;font-size:12px;padding:0}.post-actions button.liked{color:#f05e8c}
+.comments{margin-top:12px;background:#f8f8ff;border-radius:13px;padding:10px;display:none}.comments.show{display:block}.comment{font-size:12px;padding:5px 0;color:#626783}.comment b{color:#5559c9}.commentform{display:flex;gap:6px;margin-top:8px}.commentform input{flex:1;min-width:0}.commentform button{background:#e9e9ff;color:#5d5bce;padding:0 12px;border-radius:10px;font-size:12px}
+.empty{text-align:center;padding:28px 10px;color:#9699ad;font-size:13px;background:#fff;border-radius:18px}
+footer{text-align:center;color:#a0a3b7;font-size:11px;padding:25px 0 5px;line-height:1.8}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(12px);border-top:1px solid #eceeff;display:flex;justify-content:center;z-index:5;padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
+.navin{width:min(760px,100%);display:flex;justify-content:space-around}.nav button{background:none;color:#8b8fa8;font-size:11px}.nav button b{display:block;font-size:19px;margin-bottom:2px}.nav button.sel{color:#625fe8;font-weight:800}
+.modal{position:fixed;inset:0;background:#1d204766;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modal.show{display:flex}.modalbox{background:#fff;border-radius:20px;padding:20px;width:min(420px,100%);box-shadow:0 20px 60px #20234b33}.modalbox h3{margin:0 0 8px}.modalbox p{font-size:13px;color:#777d98;line-height:1.6}.modalbox input{width:100%;margin:8px 0}.modalbuttons{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.secondary{padding:9px 14px;border-radius:12px;background:#f1f1fa;color:#666b85}
+@media(min-width:650px){.wrap{padding-top:18px}.hero{border-radius:28px;margin:0}.mapview img{height:430px}.feed{grid-template-columns:1fr 1fr}.post{align-self:start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+ <div class="topline"><div class="school">西安启航职业高级中学 · 校园社区</div><div class="private">🔒 私人体验版</div></div>
+ <h1>启航校园墙 <span style="font-size:21px">✦</span></h1>
+ <div class="subtitle">让每一个校园日常，都值得被记录。</div>
+ <div class="date" id="today">2026年11月10日 · 星期二</div>
+ <div class="hero-actions"><button onclick="document.getElementById('write').scrollIntoView({behavior:'smooth'})">✎ 发布动态</button></div>
+</header>
+
+<section class="section">
+ <div class="section-head"><h2>✨ 校园快捷入口</h2><span class="small">发现身边的新鲜事</span></div>
+ <div class="quick">
+  <button onclick="setCategory('校园日常')"><span>☀️</span>校园日常</button>
+  <button onclick="setCategory('表白墙')"><span>💌</span>表白墙</button>
+  <button onclick="setCategory('失物招领')"><span>🔎</span>失物招领</button>
+  <button onclick="setCategory('学习交流')"><span>📚</span>学习交流</button>
+ </div>
+</section>
+
+<section class="section" id="write">
+ <div class="section-head"><h2>📝 分享此刻</h2><span class="small">友善表达，尊重彼此</span></div>
+ <div class="composer">
+  <div class="composer-top"><div class="avatar">✦</div><div><strong>今天想分享什么？</strong><small>可以匿名发布，也可以使用昵称</small></div></div>
+  <textarea id="content" maxlength="500" placeholder="写下你的校园日常、问题或想法吧……（最多500字）"></textarea>
+  <div class="compose-row">
+   <select id="category"><option>校园日常</option><option>表白墙</option><option>求助</option><option>失物招领</option><option>校园活动</option><option>学习交流</option></select>
+   <select id="identity"><option value="匿名同学">匿名发布</option><option value="昵称">使用昵称</option></select>
+   <input id="nickname" placeholder="你的昵称" maxlength="12" style="display:none;width:112px">
+   <button class="primary" onclick="publish()">发布动态 ↗</button>
+  </div>
+  <div class="small" style="margin-top:9px">请勿发布个人联系方式、他人隐私、辱骂或未经证实的指控。</div>
+ </div>
+</section>
+
+<section class="section" id="community">
+ <div class="section-head"><h2>🔥 校园新鲜事</h2><span class="small" id="count">0 条动态</span></div>
+ <div class="filter" id="filters">
+  <button class="active" data-cat="全部">全部</button><button data-cat="校园日常">校园日常</button><button data-cat="表白墙">表白墙</button><button data-cat="求助">求助</button><button data-cat="失物招领">失物招领</button><button data-cat="校园活动">校园活动</button><button data-cat="学习交流">学习交流</button>
+ </div>
+ <div class="feed" id="feed"></div>
+</section>
+<footer>启航校园墙 · 记录青春，分享美好<br>私人本地体验版 · 数据仅保存在当前浏览器</footer>
+</div>
+<nav class="nav"><div class="navin"><button class="sel" onclick="scrollTo({top:0,behavior:'smooth'})"><b>⌂</b>首页</button><button onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})"><b>✦</b>发现</button><button onclick="document.getElementById('write').scrollIntoView({behavior:'smooth'})"><b>＋</b>发布</button><button onclick="showAdmin()"><b>⚙</b>管理</button></div></nav>
+<div class="modal" id="admin"><div class="modalbox"><h3>🛡️ 本地管理</h3><p>这里可以清空当前浏览器保存的体验数据。正式上线前还需要添加真正的管理员登录、云端数据库和内容审核。</p><div class="modalbuttons"><button class="secondary" onclick="closeAdmin()">返回</button><button class="primary" onclick="clearAll()">清空本地动态</button></div></div></div>
+<script>
+const KEY='qihang_wall_posts_v1';
+let posts=JSON.parse(localStorage.getItem(KEY)||'null')||[
+{id:1,cat:'校园日常',author:'匿名同学',text:'欢迎来到启航校园墙！这里可以分享校园里的新鲜事、学习心得和日常小确幸。',time:'示例动态',likes:3,liked:false,comments:[]},
+{id:2,cat:'失物招领',author:'匿名同学',text:'捡到东西时记得交给可信任的老师或学校相关办公室，大家一起帮忙寻找失主。',time:'示例动态',likes:2,liked:false,comments:[]},
+{id:3,cat:'学习交流',author:'启航同学',text:'欢迎大家在这里交流学习方法，互相帮助，一起进步！',time:'示例动态',likes:5,liked:false,comments:[]}
+];
+let active='全部';
+const palette=['#6c72e8','#43bfa9','#f39a65','#e47aa9','#5b9de6'];
+function save(){localStorage.setItem(KEY,JSON.stringify(posts))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){
+ const arr=posts.filter(p=>active==='全部'||p.cat===active);
+ document.getElementById('count').textContent=posts.length+' 条动态';
+ document.getElementById('feed').innerHTML=arr.length?arr.map((p,i)=>`<article class="post">
+ <div class="post-head"><div class="post-avatar" style="background:${palette[p.id%palette.length]}">✦</div><div><div class="post-author">${esc(p.author)}</div><div class="post-time">${esc(p.time)}</div></div><span class="tag">${esc(p.cat)}</span></div>
+ <div class="post-content">${esc(p.text)}</div>
+ <div class="post-actions"><button class="${p.liked?'liked':''}" onclick="like(${p.id})">${p.liked?'♥':'♡'} ${p.likes||0} 点赞</button><button onclick="toggleComments(${p.id})">▤ 评论 ${p.comments.length}</button><button onclick="report(${p.id})">⚑ 举报</button></div>
+ <div class="comments" id="comments-${p.id}">${p.comments.map(c=>`<div class="comment"><b>${esc(c.name)}：</b>${esc(c.text)}</div>`).join('')||'<div class="comment">还没有评论，来留下友善的第一条评论吧。</div>'}<div class="commentform"><input id="comment-${p.id}" maxlength="120" placeholder="写条评论…"><button onclick="comment(${p.id})">发送</button></div></div>
+ </article>`).join(''):'<div class="empty">🌱 这里还没有相关动态，来发布第一条吧！</div>';
+}
+function publish(){
+ const text=document.getElementById('content').value.trim(),cat=document.getElementById('category').value;
+ if(!text){alert('先写点内容再发布吧！');return}
+ if(/(1[3-9]\\d{9}|\\d{7,}|微信号|QQ号)/i.test(text)){alert('请不要发布手机号、账号等个人联系方式。');return}
+ const identity=document.getElementById('identity').value;
+ let author='匿名同学';
+ if(identity==='昵称'){author=document.getElementById('nickname').value.trim();if(!author){alert('请填写昵称，或选择匿名发布。');return}}
+ posts.unshift({id:Date.now(),cat,author,text,time:new Date().toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}),likes:0,liked:false,comments:[]});
+ save();document.getElementById('content').value='';active='全部';document.querySelectorAll('.filter button').forEach(b=>b.classList.toggle('active',b.dataset.cat==='全部'));render();document.getElementById('community').scrollIntoView({behavior:'smooth'});
+}
+function like(id){const p=posts.find(x=>x.id===id);p.liked=!p.liked;p.likes=Math.max(0,(p.likes||0)+(p.liked?1:-1));save();render()}
+function toggleComments(id){document.getElementById('comments-'+id).classList.toggle('show')}
+function comment(id){const input=document.getElementById('comment-'+id),text=input.value.trim();if(!text)return;posts.find(x=>x.id===id).comments.push({name:'访客',text});save();render();document.getElementById('comments-'+id).classList.add('show')}
+function report(id){if(confirm('确定举报这条动态吗？本地体验版会记录举报提示，但不会发送给管理员。'))alert('已在本地体验中收到你的举报反馈。正式上线后将接入管理员审核。')}
+function setCategory(cat){active=cat;document.querySelectorAll('.filter button').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));render();document.getElementById('community').scrollIntoView({behavior:'smooth'})}
+document.getElementById('filters').addEventListener('click',e=>{if(e.target.dataset.cat)setCategory(e.target.dataset.cat)});
+document.getElementById('identity').addEventListener('change',e=>document.getElementById('nickname').style.display=e.target.value==='昵称'?'block':'none');
+function showAdmin(){document.getElementById('admin').classList.add('show')}function closeAdmin(){document.getElementById('admin').classList.remove('show')}
+function clearAll(){if(confirm('确定清空本浏览器保存的所有动态吗？')){posts=[];save();render();closeAdmin()}}
+const now=new Date();document.getElementById('today').textContent=`${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日 · ${'日一二三四五六'[now.getDay()]}`.replace(' · ',' · 星期');
+render();
+</script>
+</body></html>
